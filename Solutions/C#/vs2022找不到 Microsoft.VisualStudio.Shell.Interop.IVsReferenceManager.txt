@@ -1,0 +1,10 @@
+vs2019/2022添加引用提示“找不到 Microsoft.VisualStudio.Shell.Interop.IVsReferenceManager 服务的实例”的解决方案
+可能是当初在安装的时候出的问题吧
+
+1 在开始菜单里，找到 "Developer Command Prompt for VS 2019”命令行，记住要用管理员身份运行；
+
+2 用CD 把目录定位到vs2019安装目录下的 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\PublicAssemblies
+
+3 输入命令： gacutil -i Microsoft.VisualStudio.Shell.Interop.11.0.dll ，回车
+
+4  控制台提示“程序集已成功添加到缓存中”，重启2019，即可
